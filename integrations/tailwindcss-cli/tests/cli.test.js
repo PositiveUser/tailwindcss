@@ -111,13 +111,7 @@ describe('Build command', () => {
 
     let withMinify = await readOutputFile('main.css')
 
-    expect(withMinify).toEqual(
-      css`
-        .text-teal {
-          color: #40bfbf;
-        }
-      `
-    )
+    expect(withMinify).toEqual(`.text-teal{color:#40bfbf}`)
   })
 
   test('--no-autoprefixer', async () => {
